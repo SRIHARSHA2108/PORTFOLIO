@@ -214,10 +214,15 @@
     .hero-description {
       max-width: 620px;
       margin: 0 0 2.25rem;
-      color: rgba(213,213,213,.72);
+      color: #ded7f5;
+      font-family: "Inter", sans-serif;
       font-size: 1rem;
-      line-height: 1.75;
+      font-weight: 600;
+      letter-spacing: .1px;
+      line-height: 1.8;
+      text-shadow: 0 2px 18px rgba(0,0,0,.55);
     }
+    .hero-description strong { color: #ad94ff; font-weight: 700; }
     .cta-group { display: flex; gap: 1rem; }
 
     .hero-footer {
@@ -349,7 +354,20 @@
 
     .section-head { display: flex; align-items: end; justify-content: space-between; gap: 3rem; margin-bottom: 3rem; }
     .section-note { max-width: 380px; margin: 0; color: var(--muted-dark); line-height: 1.7; }
-    .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .project-filters { display: flex; flex-wrap: wrap; gap: .65rem; margin: -1rem 0 2rem; }
+    .filter-btn {
+      padding: .65rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--muted);
+      background: rgba(255,255,255,.025);
+      font: 600 .72rem/1 "Inter", sans-serif;
+      letter-spacing: .5px;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+    .filter-btn:hover, .filter-btn.active { border-color: transparent; color: #fff; background: var(--accent-gradient); }
+    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
     .project-card {
       display: flex;
       min-height: 480px;
@@ -399,6 +417,7 @@
       text-transform: uppercase;
     }
     .project-link:hover { color: #a98dfd; }
+    .project-card[hidden] { display: none; }
 
     .skills-shell {
       display: grid;
@@ -441,6 +460,28 @@
       color: #767680;
       font: 400 .75rem/1.5 "Inter", sans-serif;
     }
+    .back-to-top {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      z-index: 20;
+      display: grid;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 50%;
+      color: #fff;
+      background: var(--accent-gradient);
+      box-shadow: 0 10px 30px rgba(92,67,250,.35);
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      place-items: center;
+      transform: translateY(12px);
+      transition: opacity .25s ease, transform .25s ease;
+    }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; transform: none; }
 
     .animate-fade-up { opacity: 0; animation: fade-up .8s cubic-bezier(.16,1,.3,1) forwards; }
     .delay-1 { animation-delay: .1s; }
@@ -538,10 +579,10 @@
         <p class="greeting animate-fade-up delay-1">HELLO, I'M SRIHARSHA</p>
         <h1 class="main-title animate-fade-up delay-2">Creative Developer <span class="soft">&amp;</span><br>IoT Builder</h1>
         <p class="sub-title animate-fade-up delay-3">I build immersive digital experiences</p>
-        <p class="hero-description animate-fade-up delay-3">Working across responsive frontend, Python Flask backends, Embedded C++, Raspberry Pi, ESP32, and sensor-based systems to turn practical ideas into polished products.</p>
+        <p class="hero-description animate-fade-up delay-3">Building <strong>end-to-end digital products</strong> across responsive web interfaces, Python backends with Django and Flask, cross-platform Flutter apps, REST APIs, databases, and cloud deployment. I also develop <strong>intelligent IoT and embedded systems</strong> using C++, Raspberry Pi, ESP32, wireless communication, and real-time sensors—turning ambitious ideas into scalable, polished experiences.</p>
         <div class="cta-group animate-fade-up delay-4">
           <a class="btn btn-primary" href="#projects">View my work <i class="ph ph-arrow-down"></i></a>
-          <a class="btn btn-outline" href="mailto:nsriharsha008@gmail.com?subject=Portfolio%20Enquiry">Start a conversation <i class="ph ph-arrow-up-right"></i></a>
+          <a class="btn btn-outline" href="https://wa.me/918660629986?text=Hello%20Sriharsha%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener">Start a conversation <i class="ph ph-whatsapp-logo"></i></a>
         </div>
       </div>
     </div>
@@ -569,10 +610,10 @@
         <div class="reveal">
           <p class="eyebrow">About me</p>
           <h2 class="section-title">Practical builds. Polished code. Real hardware.</h2>
-          <p class="section-lead">I work on both sides of a product: the interface people use and the technology that makes it work. From frontend pages and Flask applications to ESP32 circuits and automation workflows, I build complete, useful systems.</p>
+          <p class="section-lead">I build complete digital products across the entire technology stack, from responsive, user-focused interfaces and cross-platform Flutter applications to robust Django and Flask backends, REST APIs, databases, authentication systems, and cloud deployments. Beyond software development, I create intelligent embedded and IoT solutions using C++, Raspberry Pi, ESP32, wireless communication, real-time sensors, and automated workflows. My goal is to transform complex ideas into reliable, connected, and production-ready systems.</p>
         </div>
         <div class="about-cards reveal">
-          <article class="glass-card"><i class="ph ph-browser"></i><h3>Software Development</h3><p>Responsive interfaces, Python backend logic, Flask apps, dashboards, forms, and deployed demos.</p></article>
+          <article class="glass-card"><i class="ph ph-browser"></i><h3>Software Development</h3><p>Responsive web interfaces, Python backend logic, Django and Flask applications, cross-platform Flutter apps, REST APIs, database integration, authentication, dashboards, forms, payment workflows, Git, and cloud deployment with Vercel.</p></article>
           <article class="glass-card"><i class="ph ph-cpu"></i><h3>Hardware Development</h3><p>Embedded C++, wireless control, Raspberry Pi, ESP32, DHT sensing, and IoT automation.</p></article>
         </div>
       </div>
@@ -581,21 +622,39 @@
     <section class="content-section" id="projects">
       <div class="section-inner">
         <div class="section-head reveal">
-          <div><p class="eyebrow">Selected work</p><h2 class="section-title">Two major projects.<br>One focused experiment.</h2></div>
-          <p class="section-note">A mix of web platforms, connected hardware, and experience-led experimentation.</p>
+          <div><p class="eyebrow">Selected work</p><h2 class="section-title">Six projects.<br>Built for real experiences.</h2></div>
+          <p class="section-note">A mix of commerce, travel, mobility, culture, connected hardware, and practical web experiences.</p>
+        </div>
+        <div class="project-filters reveal" aria-label="Filter projects">
+          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All projects</button>
+          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
+          <button class="filter-btn" type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+          <button class="filter-btn" type="button" data-filter="iot" aria-pressed="false">IoT</button>
         </div>
         <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-image"><img src="https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Green agricultural field" loading="lazy"><span class="project-tag">Major project</span></div>
-            <div class="project-body"><h3>Farmer Market Platform</h3><p>A digital marketplace that helps farmers present products and connect with buyers through a clear, approachable experience.</p><p class="project-stack">HTML · CSS · Bootstrap · Python · Flask</p><div class="project-actions"><a class="project-link" href="https://farmer-market-pf.vercel.app" target="_blank" rel="noopener">View live project <i class="ph ph-arrow-up-right"></i></a></div></div>
+          <article class="project-card reveal" data-category="web">
+            <div class="project-image"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Personalised product displayed on a desk" loading="lazy"><span class="project-tag">E-commerce</span></div>
+            <div class="project-body"><h3>Print n Gifts</h3><p>A responsive personalised-gifts store with product customisation, order tracking, Razorpay checkout, and a staff management dashboard.</p><p class="project-stack">Python · Django · HTML · CSS · JavaScript</p><div class="project-actions"><a class="project-link" href="https://p-tawny-nine.vercel.app" target="_blank" rel="noopener">Live demo <i class="ph ph-arrow-up-right"></i></a><a class="project-link" href="https://github.com/SRIHARSHA2108/p" target="_blank" rel="noopener">GitHub <i class="ph ph-github-logo"></i></a></div></div>
           </article>
-          <article class="project-card reveal">
-            <div class="project-image"><img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Smart irrigation across a field" loading="lazy"><span class="project-tag">Major project</span></div>
-            <div class="project-body"><h3>Smart Irrigation Wireless Remote Control</h3><p>A connected irrigation concept designed to make water control more convenient, responsive, and efficient.</p><p class="project-stack">Embedded C++ · ESP32 · Sensors · Wireless</p></div>
+          <article class="project-card reveal" data-category="mobile">
+            <div class="project-image"><img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Indian heritage architecture" loading="lazy"><span class="project-tag">Mobile app</span></div>
+            <div class="project-body"><h3>Gandaberunda</h3><p>A Karnataka-inspired Flutter app bringing heritage, community, events, and stories together in an accessible Material 3 experience.</p><p class="project-stack">Flutter · Dart · SQLite · Material 3</p><div class="project-actions"><a class="project-link" href="https://github.com/SRIHARSHA2108/flutter-application" target="_blank" rel="noopener">View on GitHub <i class="ph ph-github-logo"></i></a></div></div>
           </article>
-          <article class="project-card reveal">
-            <div class="project-image"><img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Astronaut looking into space" loading="lazy"><span class="project-tag">Minor project</span></div>
-            <div class="project-body"><h3>Space Crew Mission</h3><p>An exploratory project shaped around space, mission systems, and an engaging visual experience.</p><p class="project-stack">Frontend · Interaction · Experience Design</p></div>
+          <article class="project-card reveal" data-category="web">
+            <div class="project-image"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Traveler overlooking a scenic landscape" loading="lazy"><span class="project-tag">Travel platform</span></div>
+            <div class="project-body"><h3>Roamly</h3><p>An India travel companion with custom itineraries, live weather, safety insights, route comparisons, local discovery, and downloadable guides.</p><p class="project-stack">Python · Flask · JavaScript · OpenStreetMap</p><div class="project-actions"><a class="project-link" href="https://roamly-eosin-three.vercel.app" target="_blank" rel="noopener">Live demo <i class="ph ph-arrow-up-right"></i></a><a class="project-link" href="https://github.com/SRIHARSHA2108/Roamly" target="_blank" rel="noopener">GitHub <i class="ph ph-github-logo"></i></a></div></div>
+          </article>
+          <article class="project-card reveal" data-category="web">
+            <div class="project-image"><img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Modern parking garage" loading="lazy"><span class="project-tag">Smart mobility</span></div>
+            <div class="project-body"><h3>Park Ease</h3><p>An autonomous smart-parking dashboard with live space maps, vehicle guidance, automatic billing, plate scanning, and safety monitoring.</p><p class="project-stack">Python · Flask · HTML · CSS · JavaScript</p><div class="project-actions"><a class="project-link" href="https://parking-system-one-pink.vercel.app" target="_blank" rel="noopener">Live demo <i class="ph ph-arrow-up-right"></i></a><a class="project-link" href="https://github.com/SRIHARSHA2108/PARKING-SYSTEM" target="_blank" rel="noopener">GitHub <i class="ph ph-github-logo"></i></a></div></div>
+          </article>
+          <article class="project-card reveal" data-category="web">
+            <div class="project-image"><img src="https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Green agricultural field" loading="lazy"><span class="project-tag">Web platform</span></div>
+            <div class="project-body"><h3>Farmer Market Platform</h3><p>A digital marketplace that helps farmers present their products and connect directly with buyers through a clear, approachable experience.</p><p class="project-stack">HTML · CSS · Bootstrap · Python · Flask</p><div class="project-actions"><a class="project-link" href="https://farmer-market-pf.vercel.app" target="_blank" rel="noopener">Live demo <i class="ph ph-arrow-up-right"></i></a></div></div>
+          </article>
+          <article class="project-card reveal" data-category="iot">
+            <div class="project-image"><img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Smart irrigation across an agricultural field" loading="lazy"><span class="project-tag">IoT system</span></div>
+            <div class="project-body"><h3>Smart Irrigation Wireless Remote Control</h3><p>A connected irrigation system designed to make water control more convenient, responsive, and efficient through wireless hardware.</p><p class="project-stack">Embedded C++ · ESP32 · Sensors · Wireless</p></div>
           </article>
         </div>
       </div>
@@ -605,7 +664,7 @@
       <div class="section-inner skills-shell reveal">
         <div><p class="eyebrow">Skills &amp; tools</p><h2 class="section-title">A stack for complete ideas.</h2><p class="section-lead">Frontend, backend, embedded programming, boards, sensors, and deployment-aware presentation.</p></div>
         <div class="skill-list" aria-label="Technical skills">
-          <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">Bootstrap 5</span><span class="skill">Tailwind CSS</span><span class="skill">JavaScript</span><span class="skill">Python</span><span class="skill">Flask</span><span class="skill">Backend Development</span><span class="skill">Embedded C++</span><span class="skill">Raspberry Pi</span><span class="skill">ESP32</span><span class="skill">DHT Sensors</span><span class="skill">Temperature Sensors</span><span class="skill">Humidity Sensors</span><span class="skill">IoT</span><span class="skill">Git</span><span class="skill">Vercel</span>
+          <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">Bootstrap 5</span><span class="skill">Tailwind CSS</span><span class="skill">JavaScript</span><span class="skill">Python</span><span class="skill">Dart</span><span class="skill">Flutter</span><span class="skill">Django</span><span class="skill">Flask</span><span class="skill">Backend Development</span><span class="skill">Embedded C++</span><span class="skill">Raspberry Pi</span><span class="skill">ESP32</span><span class="skill">DHT Sensors</span><span class="skill">Temperature Sensors</span><span class="skill">Humidity Sensors</span><span class="skill">IoT</span><span class="skill">Xcode</span><span class="skill">Android Studio</span><span class="skill">Git</span><span class="skill">Vercel</span>
         </div>
       </div>
     </section>
@@ -623,6 +682,7 @@
   </main>
 
   <footer><span>© 2026 SRIHARSHA. All rights reserved.</span><span>Designed and built with care.</span></footer>
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="ph ph-arrow-up"></i></button>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -660,6 +720,26 @@
         });
       }, { threshold: .12 });
       document.querySelectorAll(".reveal").forEach(element => revealObserver.observe(element));
+
+      const filterButtons = [...document.querySelectorAll(".filter-btn")];
+      const projectCards = [...document.querySelectorAll(".project-card")];
+      filterButtons.forEach(button => button.addEventListener("click", () => {
+        const selectedFilter = button.dataset.filter;
+        filterButtons.forEach(item => {
+          const isActive = item === button;
+          item.classList.toggle("active", isActive);
+          item.setAttribute("aria-pressed", String(isActive));
+        });
+        projectCards.forEach(card => {
+          card.hidden = selectedFilter !== "all" && card.dataset.category !== selectedFilter;
+        });
+      }));
+
+      const backToTop = document.getElementById("backToTop");
+      const updateBackToTop = () => backToTop.classList.toggle("visible", window.scrollY > 600);
+      backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+      updateBackToTop();
+      window.addEventListener("scroll", updateBackToTop, { passive: true });
 
       const sections = [...document.querySelectorAll("header[id], main section[id]")];
       const navAnchors = [...document.querySelectorAll(".nav-links a")];
