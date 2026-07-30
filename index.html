@@ -405,7 +405,7 @@
     .project-body h3 { margin: 0 0 .65rem; font-size: 1.35rem; line-height: 1.2; }
     .project-body p { margin: 0; color: var(--muted-dark); font-size: .9rem; line-height: 1.65; }
     .project-stack { margin-top: 1rem !important; color: #a98dfd !important; font: 500 .72rem/1.5 "Inter", sans-serif !important; text-transform: uppercase; }
-    .project-actions { display: flex; gap: .65rem; margin-top: auto; padding-top: 1.5rem; }
+    .project-actions { display: flex; flex-wrap: wrap; gap: .65rem 1rem; margin-top: auto; padding-top: 1.5rem; }
     .project-link {
       display: inline-flex;
       align-items: center;
@@ -496,7 +496,7 @@
 
     @media (max-width: 1200px) {
       .hero-section, .content-section { padding-right: 2rem; padding-left: 2rem; }
-      .main-title { font-size: 4.5rem; }
+      .main-title { font-size: clamp(3.8rem, 6vw, 4.5rem); }
     }
     @media (max-width: 1024px) {
       .nav-links, .nav-actions { display: none; }
@@ -525,25 +525,47 @@
       .hero-section, .content-section { padding-right: 1.5rem; padding-left: 1.5rem; }
       .hero-section { min-height: 100svh; }
       .navbar { padding-bottom: 1rem; }
-      .main-title { font-size: 3.5rem; letter-spacing: -1px; }
+      .hero-content { padding: 3rem 0; }
+      .main-title { font-size: clamp(2.65rem, 10vw, 3.5rem); letter-spacing: -1px; line-height: 1.02; overflow-wrap: anywhere; }
       .sub-title { font-size: 1.4rem; }
+      .hero-description { max-width: none; }
       .cta-group { flex-direction: column; }
       .cta-group .btn { width: 100%; }
       .footer-left { align-items: flex-start; flex-direction: column; }
       .content-section { padding-top: 6rem; padding-bottom: 6rem; }
-      .section-head { align-items: flex-start; flex-direction: column; }
+      .section-head { align-items: flex-start; flex-direction: column; gap: 1.25rem; margin-bottom: 2.5rem; }
+      .project-filters { margin-top: -.5rem; }
       .project-grid { grid-template-columns: 1fr; }
       .about-cards { grid-template-columns: 1fr; }
       .skills-shell { padding: 2rem 1.4rem; }
+      .contact-panel .btn { max-width: 100%; padding-right: 1.25rem; padding-left: 1.25rem; overflow-wrap: anywhere; }
       footer { padding: 1.5rem; align-items: flex-start; flex-direction: column; gap: .5rem; }
     }
     @media (max-width: 480px) {
-      .main-title { font-size: 2.8rem; }
+      .hero-section, .content-section { padding-right: 1rem; padding-left: 1rem; }
+      .hero-section { padding-top: 1rem; padding-bottom: 1.25rem; }
+      .logo { font-size: 1rem; }
+      .main-title { font-size: clamp(2.15rem, 10.5vw, 2.8rem); }
       .sub-title { font-size: 1.2rem; }
-      .hero-description { font-size: .9rem; }
+      .hero-description { font-size: .88rem; line-height: 1.7; }
+      .greeting { font-size: .78rem; letter-spacing: 1.5px; }
+      .project-filters { display: grid; grid-template-columns: 1fr 1fr; }
+      .filter-btn { min-height: 44px; }
+      .project-card { min-height: 0; }
+      .project-image { height: 190px; }
+      .project-body { padding: 1.25rem; }
       .availability-card { padding: 1rem; }
       .section-title { font-size: 2.35rem; }
-      .contact-panel { padding: 3.5rem 1.25rem; }
+      .skills-shell { padding: 1.5rem 1rem; }
+      .skill { padding: .65rem .8rem; font-size: .7rem; }
+      .contact-panel { padding: 3.5rem 1rem; }
+      .contact-panel .btn { font-size: .68rem; text-transform: none; }
+      .back-to-top { right: 1rem; bottom: 1rem; width: 42px; height: 42px; }
+    }
+    @media (max-width: 360px) {
+      .main-title { font-size: 2rem; }
+      .section-title { font-size: 2rem; }
+      .project-filters { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
