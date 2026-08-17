@@ -384,9 +384,11 @@
       box-shadow: 0 25px 65px rgba(0,0,0,.45);
       transform: translateY(-8px);
     }
+    .project-card.recent { order: -1; }
     .project-image { position: relative; height: 230px; overflow: hidden; }
     .project-image::after { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(16,16,21,.75), transparent 55%); content: ""; }
     .project-image img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.65); transition: .5s ease; }
+    .project-image img.project-app-icon { object-fit: contain; padding: 2.5rem; background: #16141f; filter: none; }
     .project-card:hover img { filter: saturate(1); transform: scale(1.04); }
     .project-tag {
       position: absolute;
@@ -668,6 +670,14 @@
           <button class="filter-btn" type="button" data-filter="iot" aria-pressed="false">IoT</button>
         </div>
         <div class="project-grid">
+          <article class="project-card reveal recent" data-category="ai mobile">
+            <div class="project-image"><img class="project-app-icon" src="https://raw.githubusercontent.com/SRIHARSHA2108/IntervAI/main/assets/images/intervai_logo.png" alt="IntervAI app icon" loading="lazy"><span class="project-tag">Interview preparation</span></div>
+            <div class="project-body"><h3>IntervAI</h3><p>A private, offline interview-practice app with role-specific sessions, on-device voice features, local proctoring, explainable answer scoring, actionable reports, and private session history.</p><p class="project-stack">Flutter · Dart · On-device AI · Local storage · Computer vision</p><div class="project-actions"><a class="project-link" href="https://github.com/SRIHARSHA2108/IntervAI" target="_blank" rel="noopener">View on GitHub <i class="ph ph-github-logo"></i></a></div></div>
+          </article>
+          <article class="project-card reveal recent" data-category="web">
+            <div class="project-image"><img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Modern smart parking garage" loading="lazy"><span class="project-tag">Smart parking</span></div>
+            <div class="project-body"><h3>Park Ease</h3><p>An autonomous smart-parking dashboard with live space maps, vehicle guidance, automatic billing, plate scanning, and safety monitoring.</p><p class="project-stack">Python · Flask · HTML · CSS · JavaScript</p><div class="project-actions"><a class="project-link" href="https://parking-system-one-pink.vercel.app" target="_blank" rel="noopener">Live demo <i class="ph ph-arrow-up-right"></i></a><a class="project-link" href="https://github.com/SRIHARSHA2108/PARKING-SYSTEM" target="_blank" rel="noopener">GitHub <i class="ph ph-github-logo"></i></a></div></div>
+          </article>
           <article class="project-card reveal" data-category="ai web">
             <div class="project-image"><img src="https://raw.githubusercontent.com/SRIHARSHA2108/CareerNova/main/docs/screenshots/landing-page.png" alt="CareerNova career intelligence landing page" loading="lazy"><span class="project-tag">Career intelligence</span></div>
             <div class="project-body"><h3>CareerNova</h3><p>An AI-oriented career guidance platform combining career matching, skill-gap roadmaps, timed assessments, resume support, opportunities, application tracking, exam preparation, and progress analytics.</p><p class="project-stack">Python · Django · Tailwind CSS · JavaScript · SQLite</p><div class="project-actions"><a class="project-link" href="https://career-nova-neon.vercel.app/" target="_blank" rel="noopener">Live demo <i class="ph ph-arrow-up-right"></i></a><a class="project-link" href="https://github.com/SRIHARSHA2108/CareerNova" target="_blank" rel="noopener">GitHub <i class="ph ph-github-logo"></i></a></div></div>
@@ -693,10 +703,6 @@
             <div class="project-body"><h3>Roamly</h3><p>An India travel companion with custom itineraries, live weather, safety insights, route comparisons, local discovery, and downloadable guides.</p><p class="project-stack">Python · Flask · JavaScript · OpenStreetMap</p><div class="project-actions"><a class="project-link" href="https://roamly-eosin-three.vercel.app" target="_blank" rel="noopener">Live demo <i class="ph ph-arrow-up-right"></i></a><a class="project-link" href="https://github.com/SRIHARSHA2108/Roamly" target="_blank" rel="noopener">GitHub <i class="ph ph-github-logo"></i></a></div></div>
           </article>
           <article class="project-card reveal" data-category="web">
-            <div class="project-image"><img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Modern parking garage" loading="lazy"><span class="project-tag">Smart mobility</span></div>
-            <div class="project-body"><h3>Park Ease</h3><p>An autonomous smart-parking dashboard with live space maps, vehicle guidance, automatic billing, plate scanning, and safety monitoring.</p><p class="project-stack">Python · Flask · HTML · CSS · JavaScript</p><div class="project-actions"><a class="project-link" href="https://parking-system-one-pink.vercel.app" target="_blank" rel="noopener">Live demo <i class="ph ph-arrow-up-right"></i></a><a class="project-link" href="https://github.com/SRIHARSHA2108/PARKING-SYSTEM" target="_blank" rel="noopener">GitHub <i class="ph ph-github-logo"></i></a></div></div>
-          </article>
-          <article class="project-card reveal" data-category="web">
             <div class="project-image"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Personalised product displayed on a desk" loading="lazy"><span class="project-tag">E-commerce</span></div>
             <div class="project-body"><h3>Print n Gifts</h3><p>A responsive personalised-gifts store with product customisation, order tracking, Razorpay checkout, and a staff management dashboard.</p><p class="project-stack">Python · Django · HTML · CSS · JavaScript</p><div class="project-actions"><a class="project-link" href="https://p-tan-kappa.vercel.app" target="_blank" rel="noopener">Live demo <i class="ph ph-arrow-up-right"></i></a><a class="project-link" href="https://github.com/SRIHARSHA2108/p" target="_blank" rel="noopener">GitHub <i class="ph ph-github-logo"></i></a></div></div>
           </article>
@@ -707,6 +713,34 @@
           <article class="project-card reveal" data-category="web">
             <div class="project-image"><img src="https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Green agricultural field" loading="lazy"><span class="project-tag">Web platform</span></div>
             <div class="project-body"><h3>Farmer Market Platform</h3><p>A digital marketplace that helps farmers present their products and connect directly with buyers through a clear, approachable experience.</p><p class="project-stack">HTML · CSS · Bootstrap · Python · Flask</p><div class="project-actions"><a class="project-link" href="https://farmer-market-pf-fbqh.vercel.app" target="_blank" rel="noopener">Live demo <i class="ph ph-arrow-up-right"></i></a><a class="project-link" href="https://github.com/SRIHARSHA2108/FARMER_MARKET_PF" target="_blank" rel="noopener">GitHub <i class="ph ph-github-logo"></i></a></div></div>
+          </article>
+          <article class="project-card reveal recent" data-category="ai web">
+            <div class="project-image"><img src="https://raw.githubusercontent.com/SRIHARSHA2108/-AuraCare-Breast-Health-AI/main/docs/screenshots/home.png" alt="AuraCare breast-health support platform" loading="lazy"><span class="project-tag">Breast-health AI</span></div>
+            <div class="project-body"><h3>AuraCare</h3><p>A role-based breast-health support platform combining ultrasound classification, FNA screening, report extraction, visual highlighting, patient-friendly explanations, and clinician review.</p><p class="project-stack">Python · Flask · TensorFlow · OpenCV · SQLite</p><div class="project-actions"><a class="project-link" href="https://github.com/SRIHARSHA2108/-AuraCare-Breast-Health-AI" target="_blank" rel="noopener">View on GitHub <i class="ph ph-github-logo"></i></a></div></div>
+          </article>
+          <article class="project-card reveal recent" data-category="ai web">
+            <div class="project-image"><img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Spacecraft orbiting above Earth" loading="lazy"><span class="project-tag">Conversational AI</span></div>
+            <div class="project-body"><h3>SpaceTech Chatbot</h3><p>A lightweight web chatbot with a straightforward conversational interface, a Flask backend, and MongoDB-backed application data.</p><p class="project-stack">Python · Flask · MongoDB · HTML · JavaScript</p><div class="project-actions"><a class="project-link" href="https://github.com/SRIHARSHA2108/SPACETEC-CHATBOT" target="_blank" rel="noopener">View on GitHub <i class="ph ph-github-logo"></i></a></div></div>
+          </article>
+          <article class="project-card reveal recent" data-category="ai">
+            <div class="project-image"><img src="https://raw.githubusercontent.com/SRIHARSHA2108/LIVE-CABIN-FEED/main/docs/screenshots/sentinel-dashboard.png" alt="Sentinel Drive live cabin monitoring dashboard" loading="lazy"><span class="project-tag">Driver safety</span></div>
+            <div class="project-body"><h3>Sentinel Drive</h3><p>A privacy-first desktop driver monitor that combines facial landmarks, fatigue signals, obstruction detection, adaptive risk scoring, live telemetry, and audible safety alerts.</p><p class="project-stack">Python · OpenCV · MediaPipe · PySide6 · FastAPI</p><div class="project-actions"><a class="project-link" href="https://github.com/SRIHARSHA2108/LIVE-CABIN-FEED" target="_blank" rel="noopener">View on GitHub <i class="ph ph-github-logo"></i></a></div></div>
+          </article>
+          <article class="project-card reveal recent" data-category="ai web">
+            <div class="project-image"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Car travelling on an open road" loading="lazy"><span class="project-tag">Computer vision</span></div>
+            <div class="project-body"><h3>DriverGuard AI</h3><p>A responsive driver-monitoring dashboard that detects fatigue, distraction, yawning, hand-to-eye movement, and face obstruction from a live local camera feed.</p><p class="project-stack">Python · Flask · OpenCV · MediaPipe · SQLite</p><div class="project-actions"><a class="project-link" href="https://github.com/SRIHARSHA2108/Drowsiness-detection" target="_blank" rel="noopener">View on GitHub <i class="ph ph-github-logo"></i></a></div></div>
+          </article>
+          <article class="project-card reveal recent" data-category="web">
+            <div class="project-image"><img src="https://raw.githubusercontent.com/SRIHARSHA2108/Voter/main/docs/screenshots/03-voter-dashboard.png" alt="ConsensusVote verified voter dashboard" loading="lazy"><span class="project-tag">Secure voting</span></div>
+            <div class="project-body"><h3>ConsensusVote</h3><p>A consensus-based voting prototype with identity verification, one-person-one-vote enforcement, simulated validators, chained transaction records, anonymous receipts, and transparent results.</p><p class="project-stack">Python · Flask · Tailwind CSS · SQLite · JavaScript</p><div class="project-actions"><a class="project-link" href="https://github.com/SRIHARSHA2108/Voter" target="_blank" rel="noopener">View on GitHub <i class="ph ph-github-logo"></i></a></div></div>
+          </article>
+          <article class="project-card reveal recent" data-category="mobile">
+            <div class="project-image"><img class="project-app-icon" src="https://raw.githubusercontent.com/SRIHARSHA2108/Safeher/main/assets/images/safeher_logo_with_name.png" alt="SafeHer app icon" loading="lazy"><span class="project-tag">Personal safety</span></div>
+            <div class="project-body"><h3>SafeHer</h3><p>A privacy-conscious Flutter safety companion with GPS SOS alerts, trusted contacts, direct emergency calls, nearby facilities, multilingual support, and opt-in danger-sound detection.</p><p class="project-stack">Flutter · Dart · Android · GPS · OpenStreetMap</p><div class="project-actions"><a class="project-link" href="https://github.com/SRIHARSHA2108/Safeher" target="_blank" rel="noopener">View on GitHub <i class="ph ph-github-logo"></i></a></div></div>
+          </article>
+          <article class="project-card reveal recent" data-category="web">
+            <div class="project-image"><img src="https://raw.githubusercontent.com/SRIHARSHA2108/web/main/docs/search-creators-home.png" alt="Search Creators education and software-services website" loading="lazy"><span class="project-tag">Education platform</span></div>
+            <div class="project-body"><h3>Search Creators</h3><p>A responsive education and software-services platform featuring job-ready courses, VTU resources, project showcases, WhatsApp enquiries, and a protected contact workflow.</p><p class="project-stack">React · TypeScript · Django · Tailwind CSS · SQLite</p><div class="project-actions"><a class="project-link" href="https://web-omega-pearl-66.vercel.app" target="_blank" rel="noopener">Live demo <i class="ph ph-arrow-up-right"></i></a><a class="project-link" href="https://github.com/SRIHARSHA2108/web" target="_blank" rel="noopener">GitHub <i class="ph ph-github-logo"></i></a></div></div>
           </article>
           <article class="project-card reveal" data-category="iot">
             <div class="project-image"><img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Smart irrigation across an agricultural field" loading="lazy"><span class="project-tag">IoT system</span></div>
@@ -720,7 +754,7 @@
       <div class="section-inner skills-shell reveal">
         <div><p class="eyebrow">Skills &amp; tools</p><h2 class="section-title">A stack for complete ideas.</h2><p class="section-lead">Frontend, backend, embedded programming, boards, sensors, and deployment-aware presentation.</p></div>
         <div class="skill-list" aria-label="Technical skills">
-          <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">Bootstrap 5</span><span class="skill">Tailwind CSS</span><span class="skill">JavaScript</span><span class="skill">Python</span><span class="skill">Dart</span><span class="skill">Flutter</span><span class="skill">Django</span><span class="skill">Flask</span><span class="skill">OpenCV</span><span class="skill">YOLO</span><span class="skill">Signal Processing</span><span class="skill">Chart.js</span><span class="skill">SQLite</span><span class="skill">REST APIs</span><span class="skill">Embedded C++</span><span class="skill">Raspberry Pi</span><span class="skill">ESP32</span><span class="skill">IoT</span><span class="skill">Git</span><span class="skill">Vercel</span>
+          <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">Bootstrap 5</span><span class="skill">Tailwind CSS</span><span class="skill">JavaScript</span><span class="skill">Python</span><span class="skill">Dart</span><span class="skill">Flutter</span><span class="skill">Django</span><span class="skill">Flask</span><span class="skill">OpenCV</span><span class="skill">YOLO</span><span class="skill">Signal Processing</span><span class="skill">Chart.js</span><span class="skill">SQLite</span><span class="skill">REST APIs</span><span class="skill">Embedded C++</span><span class="skill">Raspberry Pi</span><span class="skill">ESP32</span><span class="skill">IoT</span><span class="skill">PCB Design</span><span class="skill">IoT Device Programming</span><span class="skill">Circuit Schematic Design</span><span class="skill">Git</span><span class="skill">Vercel</span>
         </div>
       </div>
     </section>
