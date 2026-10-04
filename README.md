@@ -1,76 +1,74 @@
-# Sriharsha — Developer Portfolio
+<div align="center">
 
-[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-Visit-8A63F8?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-pi-azure-67.vercel.app)
-[![Resume](https://img.shields.io/badge/Resume-View_PDF-5C43FA?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://portfolio-pi-azure-67.vercel.app/assets/Sriharsha-Resume.pdf)
-[![GitHub](https://img.shields.io/badge/GitHub-SRIHARSHA2108-181717?style=for-the-badge&logo=github)](https://github.com/SRIHARSHA2108)
+# Sriharsha N
 
-A modern, responsive portfolio showcasing my work across AI-powered applications, full-stack web development, mobile products, computer vision, signal processing, embedded systems, and IoT.
+### Software Developer · AI Builder · IoT Enthusiast
 
-## About Me
+I build practical, end-to-end products across web, mobile, artificial intelligence, computer vision, embedded systems, and IoT.
 
-I'm Sriharsha, a developer focused on turning practical ideas into complete digital products. My work spans responsive interfaces, Python backends, Flutter applications, REST APIs, databases, authentication, computer vision, explainable signal analysis, cloud deployment, and connected hardware built with ESP32 and Raspberry Pi.
+[![Portfolio](https://img.shields.io/badge/Explore_My_Portfolio-8A63F8?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-pi-azure-67.vercel.app)
+[![Resume](https://img.shields.io/badge/View_My_Resume-5C43FA?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://portfolio-pi-azure-67.vercel.app/assets/Sriharsha-Resume.pdf)
+[![Email](https://img.shields.io/badge/Contact_Me-222222?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nsriharsha008@gmail.com)
 
-I enjoy working across the full product lifecycle—from an initial concept and system design to implementation, testing, deployment, and refinement.
+</div>
 
-## Featured Projects
+## Professional Profile
 
-| Project | What it does | Core technologies |
-| --- | --- | --- |
-| [IntervAI](https://github.com/SRIHARSHA2108/IntervAI) | Private, offline interview practice with role-specific sessions, voice features, local proctoring, and explainable answer scoring. | Flutter, Dart, on-device AI, computer vision |
-| [CareerNova](https://career-nova-neon.vercel.app/) | Career guidance platform with career matching, assessments, skill-gap roadmaps, résumé support, and progress analytics. | Django, Python, Tailwind CSS, JavaScript, SQLite |
-| [WaveRoute AI](https://wave-route-ai-network-lab.vercel.app) | Real-time network intelligence dashboard for device discovery, traffic monitoring, topology, and congestion assessment. | Flask, Python, JavaScript, Chart.js |
-| [Sentinel AI](https://sentinel-ai-kkka.vercel.app) | Intelligent CCTV workflow for object tracking, behavioural signals, incident evidence, and operator review. | Flask, OpenCV, YOLO, SQLite |
-| [CardioLens AI](https://ai-driven-ecg-analysis.vercel.app) | Explainable ECG analysis with waveform filtering, peak detection, beat classification, and clinician views. | Flask, signal processing, machine learning, SQLite |
-| [Roamly](https://roamly-eosin-three.vercel.app) | India travel companion with itineraries, weather, route comparisons, local discovery, and downloadable guides. | Flask, JavaScript, OpenStreetMap |
-| [Sentinel Drive](https://github.com/SRIHARSHA2108/LIVE-CABIN-FEED) | Privacy-first desktop driver monitor with fatigue detection, risk scoring, telemetry, and safety alerts. | Python, OpenCV, MediaPipe, PySide6, FastAPI |
-| [SafeHer](https://github.com/SRIHARSHA2108/Safeher) | Privacy-conscious personal safety app with GPS SOS alerts, trusted contacts, nearby facilities, and multilingual support. | Flutter, Dart, Android, GPS, OpenStreetMap |
+I am a multidisciplinary developer focused on building reliable products that connect thoughtful user experiences with capable backend systems, intelligent models, and real-world hardware.
 
-More software, AI, mobile, and IoT projects are available on the [live portfolio](https://portfolio-pi-azure-67.vercel.app#projects).
+My work covers responsive web applications, Python services, Flutter mobile apps, REST APIs, databases, computer vision, explainable signal analysis, and connected devices. I enjoy owning the complete development process—from understanding a problem and designing the architecture to implementation, testing, deployment, and iteration.
 
-## Technical Skills
+> **Open to software development, AI, mobile, embedded systems, and IoT opportunities.**
 
-**Languages:** Python, JavaScript, Dart, C++, HTML, CSS
+## Quick Links
 
-**Frontend:** Responsive web design, Tailwind CSS, Bootstrap, Chart.js, Material 3
+- **Live portfolio:** [portfolio-pi-azure-67.vercel.app](https://portfolio-pi-azure-67.vercel.app)
+- **Résumé:** [View or download my résumé](https://portfolio-pi-azure-67.vercel.app/assets/Sriharsha-Resume.pdf)
+- **GitHub profile:** [github.com/SRIHARSHA2108](https://github.com/SRIHARSHA2108)
+- **Email:** [nsriharsha008@gmail.com](mailto:nsriharsha008@gmail.com)
 
-**Backend:** Django, Flask, FastAPI, REST APIs, authentication, SQLite, MongoDB
+## Areas of Focus
 
-**AI and data:** OpenCV, YOLO, MediaPipe, TensorFlow, computer vision, machine learning, signal processing
+- **Full-stack product development** — responsive interfaces, Python backends, authentication, APIs, databases, dashboards, and deployment
+- **AI and computer vision** — image analysis, object detection, facial landmarks, explainable scoring, and real-time monitoring
+- **Mobile development** — cross-platform Flutter applications with offline workflows, local storage, GPS, and native integrations
+- **Embedded systems and IoT** — ESP32, Raspberry Pi, sensors, wireless communication, automation, and embedded C++
 
-**Mobile:** Flutter, Dart, Android integrations, local storage, GPS
+## Selected Work
 
-**Hardware and IoT:** ESP32, Raspberry Pi, embedded C++, wireless communication, sensors, PCB and circuit schematic design
+| Project | Overview | Technology |
+| :--- | :--- | :--- |
+| **[IntervAI](https://github.com/SRIHARSHA2108/IntervAI)** | Privacy-first interview preparation with role-specific sessions, on-device voice features, local proctoring, and explainable feedback. | Flutter, Dart, on-device AI, computer vision |
+| **[CareerNova](https://career-nova-neon.vercel.app/)** | Career intelligence platform combining assessments, skill-gap roadmaps, résumé support, opportunities, and progress analytics. | Python, Django, Tailwind CSS, JavaScript, SQLite |
+| **[WaveRoute AI](https://wave-route-ai-network-lab.vercel.app)** | Real-time network intelligence for device discovery, traffic monitoring, topology visualisation, and congestion assessment. | Python, Flask, JavaScript, Chart.js |
+| **[Sentinel AI](https://sentinel-ai-kkka.vercel.app)** | Computer-vision security workflow for detection, tracking, behavioural signals, evidence preservation, and operator review. | Python, Flask, OpenCV, YOLO, SQLite |
+| **[CardioLens AI](https://ai-driven-ecg-analysis.vercel.app)** | Explainable ECG analysis with filtering, peak detection, rhythm metrics, beat classification, and clinician-facing reports. | Python, Flask, signal processing, machine learning |
+| **[Sentinel Drive](https://github.com/SRIHARSHA2108/LIVE-CABIN-FEED)** | Privacy-first driver monitoring with fatigue signals, obstruction detection, adaptive risk scoring, and live telemetry. | Python, OpenCV, MediaPipe, PySide6, FastAPI |
+| **[SafeHer](https://github.com/SRIHARSHA2108/Safeher)** | Personal-safety mobile app with GPS SOS alerts, trusted contacts, direct emergency actions, and multilingual support. | Flutter, Dart, Android, GPS, OpenStreetMap |
+| **[Roamly](https://roamly-eosin-three.vercel.app)** | India-focused travel companion with itineraries, weather, route comparisons, safety insights, and downloadable guides. | Python, Flask, JavaScript, OpenStreetMap |
 
-**Tools and deployment:** Git, GitHub, Vercel
+[Explore all projects →](https://portfolio-pi-azure-67.vercel.app#projects)
 
-## Portfolio Features
+## Technical Toolkit
 
-- Responsive single-page design for desktop, tablet, and mobile
-- Video hero section with accessible fallback styling
-- Filterable project showcase covering web, mobile, AI, data, and IoT
-- Scroll-based reveal animations with reduced-motion support
-- Direct links to live demos and source repositories
-- Integrated résumé viewer and contact options
-- Semantic HTML, keyboard focus states, and descriptive image text
-- Zero-build static deployment through Vercel
+| Category | Technologies |
+| :--- | :--- |
+| **Languages** | Python, JavaScript, Dart, C++, HTML, CSS |
+| **Frontend** | Responsive UI, Tailwind CSS, Bootstrap, Chart.js, Material 3 |
+| **Backend** | Django, Flask, FastAPI, REST APIs, authentication |
+| **Data** | SQLite, MongoDB, local storage |
+| **AI and vision** | OpenCV, YOLO, MediaPipe, TensorFlow, machine learning, signal processing |
+| **Mobile** | Flutter, Dart, Android integrations, GPS |
+| **Hardware and IoT** | ESP32, Raspberry Pi, sensors, wireless communication, PCB and schematic design |
+| **Developer tools** | Git, GitHub, Vercel |
 
-## Project Structure
+## About This Portfolio
 
-```text
-PORTFOLIO/
-├── assets/
-│   ├── project-icons/
-│   └── Sriharsha-Resume.pdf
-├── projects/
-│   └── roamly.html
-├── index.html
-├── project-details.css
-└── README.md
-```
+This repository contains my responsive, single-page portfolio. It presents selected projects through a filterable showcase and includes direct links to live products, source repositories, my résumé, and contact channels.
 
-## Run Locally
+The site is built with semantic HTML, modern CSS, and vanilla JavaScript. It includes responsive layouts, keyboard-friendly interactions, reduced-motion support, lazy-loaded imagery, and scroll-based animations without requiring a frontend framework or build pipeline.
 
-No build step or package installation is required.
+### Run Locally
 
 ```bash
 git clone https://github.com/SRIHARSHA2108/PORTFOLIO.git
@@ -78,20 +76,19 @@ cd PORTFOLIO
 python3 -m http.server 8000
 ```
 
-Open [http://localhost:8000](http://localhost:8000) in a browser. You can also open `index.html` directly for a quick preview.
+Then open [http://localhost:8000](http://localhost:8000).
 
-## Deployment
+## Let's Connect
 
-The production site is hosted on Vercel and automatically redeploys when updates are pushed to the `main` branch.
+I am interested in opportunities and collaborations involving software engineering, AI-driven products, mobile development, embedded systems, and IoT.
 
-**Live site:** [portfolio-pi-azure-67.vercel.app](https://portfolio-pi-azure-67.vercel.app)
-
-## Contact
-
-- Email: [nsriharsha008@gmail.com](mailto:nsriharsha008@gmail.com)
-- GitHub: [github.com/SRIHARSHA2108](https://github.com/SRIHARSHA2108)
-- Portfolio: [portfolio-pi-azure-67.vercel.app](https://portfolio-pi-azure-67.vercel.app)
+- [View my résumé](https://portfolio-pi-azure-67.vercel.app/assets/Sriharsha-Resume.pdf)
+- [Visit my portfolio](https://portfolio-pi-azure-67.vercel.app)
+- [Explore my GitHub](https://github.com/SRIHARSHA2108)
+- [Send me an email](mailto:nsriharsha008@gmail.com)
 
 ---
 
-Designed and built by **Sriharsha**.
+<div align="center">
+  <sub>Designed and developed by Sriharsha N.</sub>
+</div>
